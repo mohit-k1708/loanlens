@@ -11,10 +11,14 @@ that explains the numbers.
 
 **Demo: https://loanlens-self.vercel.app** . Sign in with the demo credentials below (`manager@loanlens.demo` / `Manager@123`).
 
-The hosted demo runs the React app in **demonstration mode**: all customers and figures are fictitious sample data held **in your browser**,
-and the AI Insights assistant is a scripted responder (labelled "not an AI model"). There is **no Spring Boot server or PostgreSQL database
-behind the live link**. The full stack is in this repository and runs locally: Spring Boot + PostgreSQL in [`backend/`](backend/README.md) with the
-React app in backend mode (see "Run the full stack" below), including the optional AI-written explanations.
+The live link runs the **full stack**: the React app on Vercel talks to the **Spring Boot backend and PostgreSQL database on Railway**
+(the 13 fictitious demo loans, real calculations, and the AI Insights page). Because the API has no login, the public deployment is
+**read-only** (`LOANLENS_READ_ONLY=true`): visitors can browse and ask for explanations, but creating or editing records is refused.
+No AI key is configured there, so explanations are the clearly labelled deterministic ones ("no AI model was used").
+To add or edit records, or to use AI-written explanations, run the stack locally ("Run the full stack" below).
+Offline **demonstration mode** (in-browser sample data, no backend) is what `npm run dev` runs.
+
+Deployment: Vercel builds the frontend on every push to `main`; the backend image is built from [`backend/Dockerfile`](backend/Dockerfile).
 
 ## Run
 
