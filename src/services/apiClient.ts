@@ -79,7 +79,10 @@ async function request(method: 'GET' | 'POST' | 'PUT' | 'DELETE', path: string, 
   if (!response.ok) {
     const status = response.status
     if (status === 401) throw new ApiError('unauthorized', 'HTTP 401', { status })
-    if (status === 403) throw new ApiError('forbidden', 'HTTP 403', { status })
+    if (status === 403) {
+      const body = await readErrorBody(response)
+      throw new ApiError('forbidden', 'HTTP 403', { status, serverMessage: body.message })
+    }
     if (status === 404) throw new ApiError('not-found', 'HTTP 404', { status })
     if (status === 429) throw new ApiError('rate-limited', 'HTTP 429', { status })
     if (status === 409) {

@@ -57,7 +57,7 @@ export function userMessage(err: unknown, _subject = 'this information'): string
     case 'unauthorized':
       return 'Your session has expired or you are not signed in. Please sign in again.'
     case 'forbidden':
-      return 'You do not have permission to view or change this information.'
+      return (isApiError(err) && err.serverMessage) || 'You do not have permission to view or change this information.'
     case 'not-found':
       return 'Loan information could not be found.'
     case 'validation':
