@@ -1,0 +1,7 @@
+# Only the React frontend is built on Vercel (demo mode). Everything else stays out of the upload.
+backend/
+docs/
+node_modules/
+dist/
+.git/
+.env*

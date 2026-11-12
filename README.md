@@ -1,4 +1,4 @@
-# LoanLens – Smart Loan Profitability Analyzer
+﻿# LoanLens – Smart Loan Profitability Analyzer
 
 A banking analytics frontend that shows what each loan is **estimated** to contribute after interest and
 fee income, funding cost, operational cost and Expected Credit Loss (ECL), with an AI Insights assistant
@@ -9,7 +9,7 @@ that explains the numbers.
 
 ## Live demo
 
-**Demo: _https://your-project.vercel.app_** (replace with the Vercel URL after deploying). Sign in with the demo credentials below.
+**Demo: https://loanlens-self.vercel.app** . Sign in with the demo credentials below (`manager@loanlens.demo` / `Manager@123`).
 
 The hosted demo runs the React app in **demonstration mode**: all customers and figures are fictitious sample data held **in your browser**,
 and the AI Insights assistant is a scripted responder (labelled "not an AI model"). There is **no Spring Boot server or PostgreSQL database
