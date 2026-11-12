@@ -1,0 +1,24 @@
+﻿name: Build
+
+# Every push and pull request type-checks and builds the React app. Deployment is handled by Vercel's own GitHub
+# integration (every push to main deploys the demo automatically), so no deploy credentials live in this repository.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build

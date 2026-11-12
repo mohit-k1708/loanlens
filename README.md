@@ -144,5 +144,3 @@ Break-even = within ±₹500 of zero. Risk rating is derived from PD (<3 % Low, 
 * No secrets in the frontend; nothing sensitive in `localStorage` (only the mock-session profile, in session storage unless "Remember me").
 * Server error bodies and stack traces are never displayed; request/response bodies are never logged.
 * The mock login is for demonstration only. Authentication, authorisation and data security must be enforced by Spring Boot.
-
-<!-- auto-deploy check -->
