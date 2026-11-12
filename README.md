@@ -7,6 +7,15 @@ that explains the numbers.
 > ECL is an *estimate*. A negative estimated contribution does not mean a borrower has defaulted or that
 > the bank has lost money. The UI never presents it that way.
 
+## Live demo
+
+**Demo: _https://your-project.vercel.app_** (replace with the Vercel URL after deploying). Sign in with the demo credentials below.
+
+The hosted demo runs the React app in **demonstration mode**: all customers and figures are fictitious sample data held **in your browser**,
+and the AI Insights assistant is a scripted responder (labelled "not an AI model"). There is **no Spring Boot server or PostgreSQL database
+behind the live link**. The full stack is in this repository and runs locally: Spring Boot + PostgreSQL in [`backend/`](backend/README.md) with the
+React app in backend mode (see "Run the full stack" below), including the optional AI-written explanations.
+
 ## Run
 
 ```bash

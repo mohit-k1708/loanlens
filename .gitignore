@@ -7,6 +7,9 @@ build/
 coverage/
 *.local
 
+# ---------- Vercel CLI ----------
+.vercel/
+
 # ---------- Secrets and local environment (keep only the *.example templates) ----------
 .env
 .env.*
